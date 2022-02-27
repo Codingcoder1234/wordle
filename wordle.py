@@ -1,5 +1,6 @@
 # wordle
-#.
+#if you re reading this then pls request words you want to be put into the wordlist. I imported it from a website and a lot of words i 
+#try are not accepted cuz ofthe wordlist
 #.
 from listofwords import listofwords
 import random
