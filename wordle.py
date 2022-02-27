@@ -1,13 +1,23 @@
 # wordle
 #.
 #.
-#.
 from listofwords import listofwords
 import random
 print("() means that it's in the correct position")
 print("[] means the letter is in the word, but not in the correct position")
 print("/ means the letter is not in the word")
-numberoftries = int(input("Number Of Tries: "))
+def promptuntilint(userinput):
+    while True:
+        try:
+            int(userinput)
+        except ValueError as e:
+            userinput = input("please try again: ")
+            continue#keep going to the beginning and testing int()
+        userinput = int(userinput)
+        break#once it's out it makes into an integer then breaks
+    return userinput
+numberoftries = input("Number Of Tries: ")
+numberoftries =promptuntilint(numberoftries)#keep going until the user enters a number
 word = list(listofwords[random.randrange(len(listofwords))].upper())
 for i in range(0,numberoftries):
     compare = (input("{}. Input word: ".format(i+1)).upper())# in case they enter it lowercase
