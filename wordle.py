@@ -3,7 +3,9 @@
 #try are not accepted cuz ofthe wordlist
 #.
 from listofwords import listofwords
+from extendedlistofwords import extendedlistofwords
 import random
+listforscript = []
 print("() means that it's in the correct position")
 print("[] means the letter is in the word, but not in the correct position")
 print("/ means the letter is not in the word")
