@@ -30,10 +30,10 @@ elif normalorextended.upper() == "E":
     listforscript = extendedlistofwords
 numberoftries = input("Number Of Tries: ")
 numberoftries =promptuntilint(numberoftries)#keep going until the user enters a number
-word = list(listofwords[random.randrange(len(listofwords))].upper())
+word = list(listforscript[random.randrange(len(listforscript))].upper())
 for i in range(0,numberoftries):
     compare = (input("{}. Input word: ".format(i+1)).upper())# in case they enter it lowercase
-    while compare not in listofwords:
+    while compare not in listforscript:
         compare = (input("{}. Not in word list, try again: ".format(i+1)).upper())#
     result =[]
     compare = list(compare)
