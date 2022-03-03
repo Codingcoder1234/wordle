@@ -17,6 +17,15 @@ def promptuntilint(userinput):
         userinput = int(userinput)
         break#once it's out it makes into an integer then breaks
     return userinput
+normalorextended = input("Normal List of 2k(N) or Extended List of 12k(E): ")
+while normalorextended.upper() != "N" or normalorextended.upper() != "E":
+    if normalorextended.upper() == "N" or normalorextended.upper() == "E":
+        break
+    normalorextended = input("please try again: ")
+if normalorextended.upper() == "N":
+    listforscript = listofwords
+elif normalorextended.upper() == "E":
+    listforscript = extendedlistofwords
 numberoftries = input("Number Of Tries: ")
 numberoftries =promptuntilint(numberoftries)#keep going until the user enters a number
 word = list(listofwords[random.randrange(len(listofwords))].upper())
